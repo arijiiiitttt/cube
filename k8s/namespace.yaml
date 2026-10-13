@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cube
+  labels:
+    app.kubernetes.io/name: cube
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cube-secrets
+  namespace: cube
+type: Opaque
+stringData:
+  DATABASE_URL:         "postgresql+asyncpg://user:pass@host/cube?sslmode=require"
+  REDIS_URL:            "redis://redis:6379/0"
+  MINIO_ROOT_USER:      "minioadmin"
+  MINIO_ROOT_PASSWORD:  "minioadmin123"
+  MINIO_ENDPOINT:       "minio:9000"
+  MINIO_BUCKET:         "cube-models"
+  MINIO_SECURE:         "false"
+  MLFLOW_TRACKING_URI:  "http://mlflow:5000"
+  NEXT_PUBLIC_API_URL:  "https://api.yourdomain.com"

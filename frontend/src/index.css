@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-slate-200/80 rounded-xl shadow-card;
+  }
+  .btn-primary {
+    @apply bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2 shadow-sm;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-slate-200 transition-all duration-150 inline-flex items-center justify-center gap-2;
+  }
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-500 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-all duration-150 inline-flex items-center justify-center gap-2;
+  }
+  .input {
+    @apply w-full bg-white border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 transition-all;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+  .badge-green {
+    @apply badge bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+  .badge-blue {
+    @apply badge bg-blue-50 text-blue-700 border border-blue-200;
+  }
+  .badge-yellow {
+    @apply badge bg-amber-50 text-amber-700 border border-amber-200;
+  }
+  .badge-red {
+    @apply badge bg-red-50 text-red-700 border border-red-200;
+  }
+  .badge-gray {
+    @apply badge bg-slate-100 text-slate-600 border border-slate-200;
+  }
+  .page-title {
+    @apply text-xl font-semibold text-slate-900 tracking-tight;
+  }
+  .page-desc {
+    @apply text-sm text-slate-500 mt-0.5;
+  }
+  .metric-card {
+    @apply card p-4;
+  }
+}

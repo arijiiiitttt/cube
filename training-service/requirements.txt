@@ -1,0 +1,30 @@
+# Core training stack
+torch==2.4.1
+transformers==4.45.2
+accelerate==0.34.2
+datasets==2.21.0
+tokenizers==0.20.0
+
+# QLoRA / 4-bit quantization
+peft==0.13.0
+bitsandbytes==0.44.1
+
+# Speed: paged optimizers ship inside bitsandbytes; flash-attn is a separate
+# wheel that needs a matching torch/CUDA build — install in the GPU Dockerfile,
+# not here, so the CPU image doesn't fail to build.
+# flash-attn==2.6.3
+
+# Optional extra speedup (toggle via TrainingConfig.use_unsloth) — also
+# installed only in the GPU image since it requires a CUDA GPU.
+# unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git
+
+celery==5.4.0
+redis==5.0.4
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+minio==7.2.7
+mlflow==2.16.0
+numpy==1.26.4
+tqdm==4.66.2
+PyPDF2==3.0.1
+python-dotenv==1.0.1

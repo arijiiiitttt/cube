@@ -1,10 +1,3 @@
-
-.env
-.env.local
-.env.*.local
-*.env
-.DS_Store
-
 # Logs
 logs
 *.log
@@ -12,138 +5,25 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-venv-*/
-env/
-ENV/
-.venv
-pip-log.txt
-pip-delete-this-directory.txt
+node_modules
+dist
+dist-ssr
+*.local
 
-# Virtual environments
-pythonenv*/
-
-# Database
-*.sqlite3
-*.db
-
-# MinIO / Data
-data/
-minio_data/
-redis_data/
-mlflow_data/
-hf_cache/
-
-# Build outputs
-dist/
-build/
-*.egg-info/
-*.egg
-
-# Next.js / Frontend
-.next/
-out/
-node_modules/
-.next/
-*.tsbuildinfo
-
-# Production
-*.min.js
-*.min.css
-
-# Docker
-*.dockerignore
-Dockerfile.*.bak
-
-# Kubernetes
-**/k8s/*.yaml.bak
-kubeconfig
-*.kubeconfig
-
-# IDE & Editor
+# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea/
-*.swp
-*.swo
-*.swn
-*.tmp
-.cache
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# OS
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Training artifacts (large files)
-*.pt
-*.bin
-*.safetensors
-adapter/
-checkpoints/
-outputs/
-runs/
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-*.temp
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
-
-# MLflow
-mlruns/
-
-# Notebooks (if any)
-*.ipynb
-
-# Coverage
-.coverage
-htmlcov/
-.tox/
-.nox/
-coverage.xml
-*.cover
-
-
-# Backend
-server/venv/
-server/__pycache__/
-server/*.pyc
-server/.env
-server/.env.local
-server/.env.*.local
-server/*.env
-
-# Training Service
-training-service/venv/
-training-service/__pycache__/
-training-service/hf_cache/
-training-service/*.pt
-
-# Inference Service
-inference-service/venv/
-inference-service/__pycache__/
-
-# Frontend specific
-client/.env.local
-client/.next/
-client/out/
-client/node_modules/
-
-
-# Keep these even if in ignored folders
-!**/requirements.txt
-!**/.env.example
-!**/README.md
-!**/.gitignore
+.env
+.env.local
+*.env
+*.env.local

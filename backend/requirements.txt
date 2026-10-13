@@ -8,9 +8,6 @@ alembic==1.13.1
 redis==5.0.4
 celery==5.4.0
 python-multipart==0.0.9
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-google-auth==2.29.0
 requests==2.31.0
 minio==7.2.7
 mlflow==2.16.0
