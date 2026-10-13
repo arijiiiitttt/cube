@@ -3,6 +3,10 @@
     <img alt="cube logo" src="assets/cube.png" width="150">
   </a>
 </p>
+<p align="center">
+ a distributed llm fine tuning platform ⚓ 
+</p>
+
 
 <p align="center">
   <a href="#run-it"><img alt="Python" src="https://img.shields.io/badge/python-3.11-3776AB?style=flat-square&logo=python&logoColor=white" /></a>
